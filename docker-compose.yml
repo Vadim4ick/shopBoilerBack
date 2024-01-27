@@ -1,13 +1,16 @@
 version: '3.8'
 services:
-  db:
-    restart: always
+  shop:
     image: postgres:14.3-alpine
+    restart: always
     environment:
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: root
-      POSTGRES_DB: test_db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: shop
     volumes:
-      - ./pgdata:/var/lib/postgresql/data
+      - shop:/var/lib/postgresql/data
     ports:
-      - '5434:5434'
+      - '5435:5432'
+
+volumes:
+  shop:

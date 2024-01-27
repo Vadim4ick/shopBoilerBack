@@ -1,31 +1,35 @@
 import { Module } from '@nestjs/common';
 import { UsersModule } from './users/users.module';
 import { SequelizeModule } from '@nestjs/sequelize';
-import { ConfigModule, ConfigService } from '@nestjs/config';
+import { ConfigModule } from '@nestjs/config';
 import { SequelizeConfigService } from './config/sequelizeConfig.service';
 import { databaseConfig } from './config/configuration';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
-    // SequelizeModule.forRootAsync({
-    //   imports: [ConfigModule],
-    //   useClass: SequelizeConfigService,
-    // }),
-    // ConfigModule.forRoot({
-    //   load: [databaseConfig],
-    // }),
-
-    SequelizeModule.forRoot({
-      dialect: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'postgres',
-      password: 'postgres',
-      database: 'db',
-      synchronize: true,
-      autoLoadModels: true,
+    SequelizeModule.forRootAsync({
+      imports: [ConfigModule],
+      useClass: SequelizeConfigService,
     }),
+    ConfigModule.forRoot({
+      load: [databaseConfig],
+    }),
+
+    // SequelizeModule.forRoot({
+    //   dialect: 'postgres',
+    //   host: 'localhost',
+    //   port: 5435,
+    //   username: 'admin',
+    //   password: 'admin',
+    //   database: 'shop',
+
+    //   synchronize: true,
+    //   autoLoadModels: true,
+    // }),
     UsersModule,
+
+    AuthModule,
   ],
 })
 export class AppModule {}

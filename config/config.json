@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "admin",
+    "password": "admin",
+    "database": "shop",
+    "host": "localhost",
+    "dialect": "postgres",
+    "port": 5435
+  },
+  "test": {
+    "username": "admin",
+    "password": "admin",
+    "database": "shop",
+    "host": "localhost",
+    "dialect": "postgres",
+    "port": 5435
+  },
+  "production": {
+    "username": "admin",
+    "password": "admin",
+    "database": "shop",
+    "host": "localhost",
+    "dialect": "postgres",
+    "port": 5435
+  }
+}

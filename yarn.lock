@@ -381,6 +381,11 @@
   "resolved" "https://registry.npmjs.org/@eslint/js/-/js-8.56.0.tgz"
   "version" "8.56.0"
 
+"@faker-js/faker@^8.4.0":
+  "integrity" "sha512-htW87352wzUCdX1jyUQocUcmAaFqcR/w082EC8iP/gtkF0K+aKcBp0hR5Arb7dzR8tQ1TrhE9DNa5EbJELm84w=="
+  "resolved" "https://registry.npmjs.org/@faker-js/faker/-/faker-8.4.0.tgz"
+  "version" "8.4.0"
+
 "@humanwhocodes/config-array@^0.11.13":
   "integrity" "sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg=="
   "resolved" "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.11.14.tgz"

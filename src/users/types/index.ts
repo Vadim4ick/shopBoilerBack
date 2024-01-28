@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { MESSAGES } from 'src/messages';
 
-const mockUserLogin = {
+export const mockUserLogin = {
   id: 3,
   name: 'Vadim',
   email: 'test@mail.ru',

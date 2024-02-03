@@ -1,4 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
+const { Op } = require('sequelize');
 
 const mockBoilerData = {
   id: 301,
@@ -118,4 +119,17 @@ export class findOneResponse extends BoilerParts {}
 export interface IBoilerPartsQuery {
   limit: string;
   offset: string;
+  boiler: string | undefined;
+  parts: string | undefined;
+  priceFrom: string | undefined;
+  priceTo: string | undefined;
+}
+
+export interface IBoilerPartsFilter {
+  boiler_manufacturer: string | undefined;
+  parts_manufacturer: string | undefined;
+  price: {
+    // @ts-ignore
+    [Op.between]: number[];
+  };
 }

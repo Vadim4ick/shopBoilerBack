@@ -1,8 +1,12 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNotEmpty } from 'class-validator';
+import { IsNotEmpty, IsOptional } from 'class-validator';
 
 export class MakePaymentDto {
   @ApiProperty({ example: 100 })
   @IsNotEmpty()
   readonly amount: number;
+
+  @ApiProperty({ example: 'Заказ номер #1' })
+  @IsOptional()
+  readonly description?: string;
 }

@@ -6,6 +6,7 @@ import { CheckPaymentDto } from './dto/check-payment.dto';
 @Injectable()
 export class PaymentService {
   async makePayment(makePaymentDto: MakePaymentDto) {
+    console.log('makePaymentDto.description', makePaymentDto);
     try {
       const { data } = await axios({
         baseURL: 'https://api.yookassa.ru/v3/payments',

@@ -45,7 +45,7 @@ module.exports = {
 
         price: faker.number.int({ max: 10000 }),
 
-        name: faker.lorem.sentence(2),
+        name: faker.lorem.sentence(3),
 
         description: faker.lorem.sentence(10),
 
